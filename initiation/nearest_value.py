@@ -1,6 +1,15 @@
 def nearest_value(values: set, one: int) -> int:
-    # your code here
-    return None
+    values = list(values)
+    nearest_val = one
+    minDiff = abs(one-values[0])
+    for number in values:
+        if(abs(number - one) < minDiff):
+            minDiff = abs(number - one)
+            nearest_val = number
+        elif (abs(number-one) == minDiff):
+            if (number <= one or nearest_val == one):
+                nearest_val = number
+    return nearest_val
 
 
 if __name__ == '__main__':
