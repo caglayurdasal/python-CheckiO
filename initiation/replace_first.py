@@ -6,7 +6,7 @@ def replace_first(items: list) -> Iterable:
     if(items == []):
         return items
     else:
-        return (items[1:]+items[0])
+        return (items[1:]+[items[0]])   # Concatenate two lists
 
 
 if __name__ == "__main__":
