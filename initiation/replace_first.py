@@ -2,11 +2,11 @@ from typing import Iterable
 
 
 def replace_first(items: list) -> Iterable:
+    # Use slicing to modify the list
     if(items == []):
         return items
-    first = items.pop(0)
-    items.append(first)
-    return items
+    else:
+        return (items[1:]+items[0])
 
 
 if __name__ == "__main__":
