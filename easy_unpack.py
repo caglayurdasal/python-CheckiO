@@ -1,9 +1,7 @@
 def easy_unpack(elements: tuple) -> tuple:
-    """
-        returns a tuple with 3 elements - first, third and second to the last
-    """
 
-    return ()
+    # returns a tuple of 1.,3. and 2. from the last values
+    return elements[0], elements[2], elements[-2]
 
 
 if __name__ == '__main__':
