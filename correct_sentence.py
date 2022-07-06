@@ -3,10 +3,11 @@ def correct_sentence(text: str) -> str:
         returns a corrected sentence which starts with a capital letter
         and ends with a dot.
     """
-
+    # Checks ascii equilevant of the first letter to determine
+    # if it is uppercase
     if (ord(text[0]) >= 97 and ord(text[0]) <= 122):
-        first = chr(ord(text[0]) - 32)
-        text = first + text[1:]
+        first = chr(ord(text[0]) - 32)  # Converts to uppercase equilevant
+        text = first + text[1:]    # Appends capitalized first and rest of text
 
     if (text[len(text)-1] != '.'):
         text += '.'
